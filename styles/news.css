@@ -28,16 +28,19 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
+
 
 .news-header {
   text-align: center;
@@ -180,8 +183,11 @@ footer p {
   }
 
   nav ul {
-    flex-direction: column;
     gap: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
   }
 
   .news-grid {
@@ -215,6 +221,14 @@ footer p {
 @media (max-width: 480px) {
   body {
     font-size: 15px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
   }
 
   .news-header h1 {
