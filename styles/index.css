@@ -13,7 +13,12 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   font-size: 16px;
-  
+  padding: 0;
+}
+
+/* Apply border-box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -53,15 +58,16 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 0 15px;
   margin-bottom: -2rem;
+  width: 100%;
 }
 
 
 .hero-content h1 {
   font-size: 4rem;
   white-space: nowrap;
-  margin-bottom: 1rem;
+  margin-bottom: -0.4rem;
   color: #00ffff; /* Default color */
   font-weight: bold;
   text-transform: uppercase; /* Make text uppercase for more impact */
@@ -373,7 +379,7 @@ footer p {
   }
 
   nav ul {
-    gap: 0.3rem;
+    gap: 1rem;
   }
 
   nav a {
