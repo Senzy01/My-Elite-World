@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles/contact.css">
+  <script defer src="script/index.js"></script>
+</head>
+<body>
+
+     <!-- Navigation -->
+     <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">World News</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  
+
+  <section class="contact-hero">
+    <div class="contact-intro">
+      <h1>Let's Connect</h1>
+      <p>Got something on your mind? Message me directly — I'm listening.</p>
+    </div>
+  </section>
+
+  <section class="contact-form-section" style="background-image: url(images/contact\ background\ image.jpg);">
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+
+      <input type="text" id="review" placeholder="Your Review (optional)">
+      
+      <label for="rating">Rate my page (1–5)</label>
+      <select id="rating">
+        <option value="">--Choose--</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Great</option>
+        <option value="3">3 - Good</option>
+        <option value="2">2 - Fair</option>
+        <option value="1">1 - Poor</option>
+      </select>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="contact-socials">
+    <h3>Or reach me directly:</h3>
+    <div class="social-icons">
+      <a href="mailto:angelsenzy12@gmail.com" title="Gmail">Gmail</a>
+      <a href="https://snapchat.com/t/cda68Rj9" target="_blank" title="Snapchat">Snapchat</a>
+      <a href="https://x.com/senzywf?s=21" target="_blank" title="X (Twitter)">X (Twitter)</a>
+      <a href="tel:‪+23478693662‬" title="Phone">Call Me</a>
+    </div>
+  </section>
+
+     <!-- Bottom Navigation -->
+     <div class="bottom-links">
+      <a href="business.html" class="btn-link">← Back to business</a>
+    </div>
+</body>
+</html>

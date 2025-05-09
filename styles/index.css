@@ -1,0 +1,393 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0 auto;
+  font-size: 16px;
+  
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  background-color: #000;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00ffff; /* Default color */
+  font-weight: bold;
+  text-transform: uppercase; /* Make text uppercase for more impact */
+  letter-spacing: 1px; /* Slightly space the letters for better legibility */
+  animation: rainbow-text 25s ease infinite; /* Slower animation (10s) */
+}
+
+/* Rainbow Text Animation */
+@keyframes rainbow-text {
+  0% { color: red; }
+  12% { color: orange; }
+  24% { color: yellow; }
+  36% { color: green; }
+  48% { color: blue; }
+  60% { color: indigo; }
+  72% { color: violet; }
+  84% { color: pink; }
+  100% { color: red; }
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* Scrollable Section */
+.scrollable-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.image-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  padding: 1rem 0;
+}
+
+.image-carousel img {
+  height: 300px;
+  width: auto;
+  border-radius: 10px;
+}
+
+/* Horizontal Scroll */
+.about-hero {
+  background-image: url('images');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #f0f0f0;
+  text-align: center;
+  position: relative;
+  padding: 3rem 1rem;
+}
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: 0;
+}
+
+.about-hero h2,
+.about-hero a,
+.about-hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-about {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-about:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+
+.scrolling-content-horizontal {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  margin: o auto;
+}
+
+.scroll-image {
+  min-width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.world-news {
+  padding: 80px 20px;
+  background: url('images') no-repeat center center/cover;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.news-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.news-card {
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  scroll-snap-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.world-news .news-card .news-container.news-link::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* black overlay for readability */
+  z-index: -1;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+}
+
+.news-link a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #00ffff;
+}
+
+.news-link a:hover {
+  color: white;
+  border-color: white;
+}
+
+.map-preview {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.map-preview::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+}
+
+.map-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #00ffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+  background-color: #00cccc;
+}
+
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1px 0px;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+footer p {
+  font-size: smaller;
+  margin-top: 5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 30px;
+  filter: invert(1); /* Makes the icon white */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .scrolling-content-horizontal {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-carousel img,
+  .scroll-image {
+    height: 200px;
+  }
+
+  .news-card {
+    min-width: 250px;
+    padding: 15px;
+  }
+
+  .map-content {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .scrolling-content-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .image-carousel img,
+  .scroll-image {
+    height: 180px;
+  }
+
+  .news-card {
+    min-width: 200px;
+    padding: 12px;
+  }
+
+  .map-link {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.75em;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .social-icons a img {
+    width: 18px;
+    height: 25px;
+  }
+}
