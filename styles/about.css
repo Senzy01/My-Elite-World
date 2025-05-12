@@ -173,7 +173,7 @@ footer p {
 /* For Tablets - max width 768px */
 @media (max-width: 768px) {
   nav ul {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   nav a {
@@ -245,7 +245,7 @@ footer p {
   }
 
   nav ul {
-    gap: 1rem;
+    gap: 1.7rem;
   }
 
   nav a {
