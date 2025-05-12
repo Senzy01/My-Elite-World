@@ -162,7 +162,7 @@ button:hover {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   nav ul {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   nav a {
@@ -208,7 +208,7 @@ button:hover {
   }
 
   nav ul {
-    gap: 1rem;
+    gap: 1.7rem;
   }
 
   nav a {
